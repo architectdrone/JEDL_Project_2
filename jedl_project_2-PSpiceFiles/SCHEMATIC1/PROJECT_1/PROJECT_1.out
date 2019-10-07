@@ -1,0 +1,173 @@
+
+**** 10/07/19 11:37:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PROJECT_1"  [ h:\00_fall_2019\jedl\project2\jedl_project_2-PSpiceFiles\SCHEMATIC1\PROJECT_1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "PROJECT_1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\o167m805\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1s 0 0.01 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source JEDL_PROJECT_2
+X_U1         0 0 N00863 N00646 N00754 0 0 N01035 N00220 N00220 N00852 LM723
+V_Vin         N00220 0 0Vdc
+C_C1         0 N00220  1n  TC=0,0 
+C_C4         0 N00220  1n  TC=0,0 
+C_C5         N00646 N00220  1n  TC=0,0 
+R_R1         N00788 N00754  1k TC=0,0 
+R_R2         0 N00788  1k TC=0,0 
+C_C6         N00863 N00852  470p  TC=0,0 
+R_R3         N00863 N00852  1k TC=0,0 
+R_R4         N00852 N02077  1k TC=0,0 
+R_R5         0 N00852  1k TC=0,0 
+R_R6         0 N00220  5k TC=0,0 
+L_L1         N00220 N01484  10uH  
+Q_IRF510         N01484 N01886 0 QbreakP 
+R_R7         0 N01035  470 TC=0,0 
+R_ARD_Error_Voltage         0 N01035  1k TC=0,0 
+V_ARD_PWM         N01886 0  
++PULSE 5 0 0.5 0.01 0.01 0.5 1
+D_1N5817         N01484 N02077 Dbreak 
+C_C3         0 N02077  2200u  TC=0,0 
+C_C2         0 N02077  0.1u  TC=0,0 
+R_LOAD         0 N02077  1k TC=0,0 
+
+**** RESUMING PROJECT_1.cir ****
+.END
+
+**** 10/07/19 11:37:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PROJECT_1"  [ h:\00_fall_2019\jedl\project2\jedl_project_2-PSpiceFiles\SCHEMATIC1\PROJECT_1.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          X_U1.Dz         
+          IS   10.000000E-15   50.000000E-15 
+          BV                    5.79         
+         IBV                   50.000000E-09 
+          RS     .1             4            
+         CJO  100.000000E-15                 
+
+
+**** 10/07/19 11:37:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PROJECT_1"  [ h:\00_fall_2019\jedl\project2\jedl_project_2-PSpiceFiles\SCHEMATIC1\PROJECT_1.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               QbreakP         X_U1.Npn1       
+               PNP             NPN             
+       LEVEL    1               1            
+          IS  100.000000E-18   10.000000E-15 
+          BF  100              55            
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.2             2.42         
+           D     .52             .87         
+
+
+**** 10/07/19 11:37:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PROJECT_1"  [ h:\00_fall_2019\jedl\project2\jedl_project_2-PSpiceFiles\SCHEMATIC1\PROJECT_1.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00220)    0.0000 (N00646)    -.8493 (N00754)    7.0968 (N00788)    3.5484     
+
+(N00852)    -.3886 (N00863)    -.4094 (N01035)-2.317E-12 (N01484)    0.0000     
+
+(N01886)    5.0000 (N02077)    -.1943 (X_U1.20)   -1.0680                       
+
+(X_U1.21)-111.0E-12                   (X_U1.22)    7.1500                       
+
+(X_U1.23)-2.317E-12                   (X_U1.24)     .0012                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vin       -5.831E-04
+    V_ARD_PWM   -5.050E-12
+    X_U1.Vmon    5.528E-25
+
+    TOTAL POWER DISSIPATION   2.53E-11  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/07/19 11:37:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PROJECT_1"  [ h:\00_fall_2019\jedl\project2\jedl_project_2-PSpiceFiles\SCHEMATIC1\PROJECT_1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .09
+
