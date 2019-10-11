@@ -1,23 +1,23 @@
 * source JEDL_PROJECT_2
-X_U1         0 0 N00863 N00646 N00754 0 0 N01035 N00220 N00220 N00852 LM723
-V_Vin         N00220 0 0Vdc
+X_U1         0 0 N00863 N00646 N00754 0 0 N01035 N00420 N00420 N00852 LM723
+V_V1         N00220 0 8Vdc
 C_C1         0 N00220  1n  TC=0,0 
-C_C4         0 N00220  1n  TC=0,0 
-C_C5         N00646 N00220  1n  TC=0,0 
-R_R1         N00788 N00754  1k TC=0,0 
-R_R2         0 N00788  1k TC=0,0 
+C_C4         0 N00420  0.1u  TC=0,0 
+C_C5         N00646 N00420  0.047u  TC=0,0 
+R_R1         N00646 N00754  1k TC=0,0 
+R_R2         0 N00646  1k TC=0,0 
 C_C6         N00863 N00852  470p  TC=0,0 
 R_R3         N00863 N00852  1k TC=0,0 
 R_R4         N00852 N02077  1k TC=0,0 
 R_R5         0 N00852  1k TC=0,0 
-R_R6         0 N00220  5k TC=0,0 
-L_L1         N00220 N01484  10uH  
+L_L1         N00420 N01484  100uH  
 Q_IRF510         N01484 N01886 0 QbreakP 
 R_R7         0 N01035  470 TC=0,0 
 R_ARD_Error_Voltage         0 N01035  1k TC=0,0 
-V_ARD_PWM         N01886 0  
-+PULSE 5 0 0.5 0.01 0.01 0.5 1
+V_V2         N01886 0  
++PULSE 5 0 0 1E-9 1E-9 1.0 1
 D_1N5817         N01484 N02077 Dbreak 
 C_C3         0 N02077  2200u  TC=0,0 
 C_C2         0 N02077  0.1u  TC=0,0 
 R_LOAD         0 N02077  1k TC=0,0 
+R_R8         N00220 N00420  1k TC=0,0 

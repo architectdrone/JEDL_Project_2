@@ -1,7 +1,7 @@
+
+**** 10/11/19 11:48:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
 
-**** 10/07/19 11:37:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
-
- ** Profile: "SCHEMATIC1-PROJECT_1"  [ h:\00_fall_2019\jedl\project2\jedl_project_2-PSpiceFiles\SCHEMATIC1\PROJECT_1.sim ] 
+ ** Profile: "SCHEMATIC1-PROJECT_1"  [ H:\00_Fall_2019\JEDL\Project2\jedl_project_2-pspicefiles\schematic1\project_1.sim ] 
 
 
  ****     CIRCUIT DESCRIPTION
@@ -22,7 +22,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 1s 0 0.01 
+.TRAN  0 10 0 
 .OPTIONS ADVCONV
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
@@ -31,35 +31,35 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source JEDL_PROJECT_2
-X_U1         0 0 N00863 N00646 N00754 0 0 N01035 N00220 N00220 N00852 LM723
-V_Vin         N00220 0 0Vdc
+X_U1         0 0 N00863 N00646 N00754 0 0 N01035 N00420 N00420 N00852 LM723
+V_V1         N00220 0 8Vdc
 C_C1         0 N00220  1n  TC=0,0 
-C_C4         0 N00220  1n  TC=0,0 
-C_C5         N00646 N00220  1n  TC=0,0 
-R_R1         N00788 N00754  1k TC=0,0 
-R_R2         0 N00788  1k TC=0,0 
+C_C4         0 N00420  0.1u  TC=0,0 
+C_C5         N00646 N00420  0.047u  TC=0,0 
+R_R1         N00646 N00754  1k TC=0,0 
+R_R2         0 N00646  1k TC=0,0 
 C_C6         N00863 N00852  470p  TC=0,0 
 R_R3         N00863 N00852  1k TC=0,0 
 R_R4         N00852 N02077  1k TC=0,0 
 R_R5         0 N00852  1k TC=0,0 
-R_R6         0 N00220  5k TC=0,0 
-L_L1         N00220 N01484  10uH  
+L_L1         N00420 N01484  100uH  
 Q_IRF510         N01484 N01886 0 QbreakP 
 R_R7         0 N01035  470 TC=0,0 
 R_ARD_Error_Voltage         0 N01035  1k TC=0,0 
-V_ARD_PWM         N01886 0  
-+PULSE 5 0 0.5 0.01 0.01 0.5 1
+V_V2         N01886 0  
++PULSE 5 0 0 1E-9 1E-9 1.0 1
 D_1N5817         N01484 N02077 Dbreak 
 C_C3         0 N02077  2200u  TC=0,0 
 C_C2         0 N02077  0.1u  TC=0,0 
 R_LOAD         0 N02077  1k TC=0,0 
+R_R8         N00220 N00420  1k TC=0,0 
 
 **** RESUMING PROJECT_1.cir ****
 .END
 
-**** 10/07/19 11:37:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+**** 10/11/19 11:48:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-PROJECT_1"  [ h:\00_fall_2019\jedl\project2\jedl_project_2-PSpiceFiles\SCHEMATIC1\PROJECT_1.sim ] 
+ ** Profile: "SCHEMATIC1-PROJECT_1"  [ H:\00_Fall_2019\JEDL\Project2\jedl_project_2-pspicefiles\schematic1\project_1.sim ] 
 
 
  ****     Diode MODEL PARAMETERS
@@ -78,9 +78,9 @@ R_LOAD         0 N02077  1k TC=0,0
          CJO  100.000000E-15                 
 
 
-**** 10/07/19 11:37:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+**** 10/11/19 11:48:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-PROJECT_1"  [ h:\00_fall_2019\jedl\project2\jedl_project_2-PSpiceFiles\SCHEMATIC1\PROJECT_1.sim ] 
+ ** Profile: "SCHEMATIC1-PROJECT_1"  [ H:\00_Fall_2019\JEDL\Project2\jedl_project_2-pspicefiles\schematic1\project_1.sim ] 
 
 
  ****     BJT MODEL PARAMETERS
@@ -116,9 +116,9 @@ R_LOAD         0 N02077  1k TC=0,0
            D     .52             .87         
 
 
-**** 10/07/19 11:37:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+**** 10/11/19 11:48:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-PROJECT_1"  [ h:\00_fall_2019\jedl\project2\jedl_project_2-PSpiceFiles\SCHEMATIC1\PROJECT_1.sim ] 
+ ** Profile: "SCHEMATIC1-PROJECT_1"  [ H:\00_Fall_2019\JEDL\Project2\jedl_project_2-pspicefiles\schematic1\project_1.sim ] 
 
 
  ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -131,15 +131,15 @@ R_LOAD         0 N02077  1k TC=0,0
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N00220)    0.0000 (N00646)    -.8493 (N00754)    7.0968 (N00788)    3.5484     
+(N00220)    8.0000 (N00420)    2.8705 (N00646)    3.4724 (N00754)    7.0957     
 
-(N00852)    -.3886 (N00863)    -.4094 (N01035)-2.317E-12 (N01484)    0.0000     
+(N00852)    1.3846 (N00863)    1.3846 (N01035)     .1706 (N01484)    2.8705     
 
-(N01886)    5.0000 (N02077)    -.1943 (X_U1.20)   -1.0680                       
+(N01886)    5.0000 (N02077)    2.1867 (X_U1.20)    2.8111                       
 
-(X_U1.21)-111.0E-12                   (X_U1.22)    7.1500                       
+(X_U1.21)     .8068                   (X_U1.22)    7.1500                       
 
-(X_U1.23)-2.317E-12                   (X_U1.24)     .0012                   
+(X_U1.23)     .1706                   (X_U1.24)     .0012                   
 
 
 
@@ -147,19 +147,19 @@ R_LOAD         0 N02077  1k TC=0,0
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
-    V_Vin       -5.831E-04
-    V_ARD_PWM   -5.050E-12
-    X_U1.Vmon    5.528E-25
+    V_V1        -5.130E-03
+    V_V2        -2.180E-12
+    X_U1.Vmon    4.912E-04
 
-    TOTAL POWER DISSIPATION   2.53E-11  WATTS
+    TOTAL POWER DISSIPATION   4.10E-02  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 10/07/19 11:37:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+**** 10/11/19 11:48:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-PROJECT_1"  [ h:\00_fall_2019\jedl\project2\jedl_project_2-PSpiceFiles\SCHEMATIC1\PROJECT_1.sim ] 
+ ** Profile: "SCHEMATIC1-PROJECT_1"  [ H:\00_Fall_2019\JEDL\Project2\jedl_project_2-pspicefiles\schematic1\project_1.sim ] 
 
 
  ****     JOB STATISTICS SUMMARY
@@ -169,5 +169,6 @@ R_LOAD         0 N02077  1k TC=0,0
 
 
 
-  Total job time (using Solver 1)   =         .09
+  License check-out time            =     1500.74
+  Total job time (using Solver 1)   =         .11
 
