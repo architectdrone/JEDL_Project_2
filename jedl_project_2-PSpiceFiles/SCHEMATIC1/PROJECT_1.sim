@@ -3,7 +3,7 @@
 @Settings: 0 1
 @General:
 ProfileName= "PROJECT_1" 
-ProfileFile= "project_1.sim" 
+ProfileFile= "PROJECT_1.sim" 
 Connectivity= "SCHEMATIC1.net" 
 NetlistFile= "PROJECT_1.cir" 
 DataFile= "PROJECT_1.dat" 
@@ -13,8 +13,8 @@ Notes=
 @#$ENDNOTES
 @End General
 @Analysis: 0 1
-+1 0 0 0 
-+0 "10" 
++0 0 0 0 
++0 "5" 
 +1 "" 
 +2 "0" 
 +3 "" 
