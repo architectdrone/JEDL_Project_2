@@ -1235,37 +1235,37 @@
             ("pspice_path"	"V_V2")
             ("level"	"0")
             ("model_params"
-                ("PW"
-                    ("value"	"1")
-                    ("pspice_param"	"PW")
+                ("BiasValue Power"
+                    ("value"	"-3.553fW")
+                    ("pspice_param"	"BiasValue Power")
                 )
-                ("TF"
-                    ("value"	"1E-9")
-                    ("pspice_param"	"TF")
-                )
-                ("V2"
-                    ("value"	"0")
-                    ("pspice_param"	"V2")
-                )
-                ("V1"
-                    ("value"	"8")
-                    ("pspice_param"	"V1")
-                )
-                ("TR"
-                    ("value"	"1E-9")
-                    ("pspice_param"	"TR")
+                ("PER"
+                    ("value"	"4u")
+                    ("pspice_param"	"PER")
                 )
                 ("TD"
                     ("value"	"0")
                     ("pspice_param"	"TD")
                 )
-                ("PER"
-                    ("value"	"2")
-                    ("pspice_param"	"PER")
+                ("TR"
+                    ("value"	"1E-9")
+                    ("pspice_param"	"TR")
                 )
-                ("BiasValue Power"
-                    ("value"	"-3.553fW")
-                    ("pspice_param"	"BiasValue Power")
+                ("V1"
+                    ("value"	"8")
+                    ("pspice_param"	"V1")
+                )
+                ("V2"
+                    ("value"	"0")
+                    ("pspice_param"	"V2")
+                )
+                ("TF"
+                    ("value"	"1E-9")
+                    ("pspice_param"	"TF")
+                )
+                ("PW"
+                    ("value"	"1u")
+                    ("pspice_param"	"PW")
                 )
                 ("DC"
                     ("value"	"")

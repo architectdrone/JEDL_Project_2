@@ -1,5 +1,5 @@
 
-**** 10/16/19 09:12:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+**** 10/18/19 15:33:02 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-PROJECT_1"  [ H:\00_Fall_2019\JEDL\Project2\jedl_project_2-pspicefiles\schematic1\project_1.sim ] 
 
@@ -22,7 +22,7 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 5 0 
+.TRAN  0 5ms 0 
 .OPTIONS ADVCONV
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
@@ -46,7 +46,7 @@ L_L1         N00220 N01484  100uH
 R_R7         0 N01035  470 TC=0,0 
 R_ARD_Error_Voltage         0 N01035  1k TC=0,0 
 V_V2         N01886 0  
-+PULSE 8 0 0 1E-9 1E-9 1 2
++PULSE 8 0 0 1E-9 1E-9 1u 4u
 C_C3         0 N02077  2200u  TC=0,0 
 C_C2         0 N02077  0.1u  TC=0,0 
 R_LOAD         0 N02077  1K TC=0,0 
@@ -58,7 +58,7 @@ D_D3         N01484 N02077 D1N5817
 **** RESUMING PROJECT_1.cir ****
 .END
 
-**** 10/16/19 09:12:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+**** 10/18/19 15:33:02 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-PROJECT_1"  [ H:\00_Fall_2019\JEDL\Project2\jedl_project_2-pspicefiles\schematic1\project_1.sim ] 
 
@@ -84,7 +84,7 @@ D_D3         N01484 N02077 D1N5817
          XTI    0                            
 
 
-**** 10/16/19 09:12:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+**** 10/18/19 15:33:02 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-PROJECT_1"  [ H:\00_Fall_2019\JEDL\Project2\jedl_project_2-pspicefiles\schematic1\project_1.sim ] 
 
@@ -122,7 +122,7 @@ D_D3         N01484 N02077 D1N5817
            D     .87         
 
 
-**** 10/16/19 09:12:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+**** 10/18/19 15:33:02 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-PROJECT_1"  [ H:\00_Fall_2019\JEDL\Project2\jedl_project_2-pspicefiles\schematic1\project_1.sim ] 
 
@@ -175,7 +175,7 @@ D_D3         N01484 N02077 D1N5817
        XPART    0            
 
 
-**** 10/16/19 09:12:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+**** 10/18/19 15:33:02 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-PROJECT_1"  [ H:\00_Fall_2019\JEDL\Project2\jedl_project_2-pspicefiles\schematic1\project_1.sim ] 
 
@@ -216,7 +216,7 @@ D_D3         N01484 N02077 D1N5817
 
           JOB CONCLUDED
 
-**** 10/16/19 09:12:35 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+**** 10/18/19 15:33:02 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-PROJECT_1"  [ H:\00_Fall_2019\JEDL\Project2\jedl_project_2-pspicefiles\schematic1\project_1.sim ] 
 
@@ -228,6 +228,6 @@ D_D3         N01484 N02077 D1N5817
 
 
 
-  License check-out time            =       19.36
-  Total job time (using Solver 1)   =         .14
+  License check-out time            =      338.98
+  Total job time (using Solver 1)   =       12.39
 
